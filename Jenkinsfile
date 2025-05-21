@@ -2,9 +2,10 @@ pipeline {
   agent any
 
   stages {
-    stage('Checkout') {
+    stage('Checkout App') {
       steps {
-        git branch: 'main', url: 'https://github.com/SLEEPYNANA/8.2CDevSecOps'
+        deleteDir()
+        git url: 'https://github.com/SLEEPYNANA/8.2CDevSecOps', branch: 'main'
       }
     }
     stage('Install Dependencies') {
