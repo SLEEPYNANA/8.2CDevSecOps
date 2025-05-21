@@ -5,7 +5,8 @@ pipeline {
     stage('Checkout App') {
       steps {
         deleteDir()
-        git url: 'https://github.com/SLEEPYNANA/8.2CDevSecOps', branch: 'main'
+        git branch: 'main',
+            url: 'https://github.com/snyk-labs/nodejs-goof.git'
       }
     }
     stage('Install Dependencies') {
